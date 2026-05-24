@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Train Hub - Ticketing</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <div class="container-one">
+        <nav class="navbar navbar-expand-lg glass">
+            <div class="container-fluid">
+                <a href="home1.html" class="navbar-brand">
+                    <img src="Images/logo.png" width="90px" height="90px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-3"><a href="home1.html" class="nav-link"> Home </a></li>
+                        <li class="nav-item px-3"><a href="about1.html" class="nav-link"> About </a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="journeyplanner1.html" role="button" data-bs-toggle="dropdown"> Journey Planner </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="ticketing.html"> Ticketing </a></li>
+                                <li><a class="dropdown-item" href="map1.html"> Map </a></li>
+                                <li><a class="dropdown-item" href="schedule1.html"> Schedule </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-3"><a href="sustainability1.html" class="nav-link"> Sustainability </a></li>
+                        <li class="nav-item px-3"><a href="contact1.html" class="nav-link"> Contact </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <i class="bi bi-person-circle"></i>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="heroCarousel" class="carousel slide hero-container shadow" data-bs-ride="carousel" style="background-color: #24293E; min-height: 320px; display: flex; align-items: center;">
+    
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+        
+        <div class="carousel-item active py-5">
+            <div class="text-center px-4">
+                <h1 class="hero-title fw-bold display-4" style="color: #E1D9BC;">Online Ticket Booking</h1>
+                <p class="hero-desc lead mx-auto" style="color: #F0F0DB; max-width: 700px;">
+                    Skip the long station queues. Reserve your train seats instantly, choose your preferred coach layout, and secure your paperless digital tickets online.
+                </p>
+            </div>
+        </div>
+        
+        <div class="carousel-item py-5">
+            <div class="text-center px-4">
+                <h1 class="hero-title fw-bold display-4" style="color: #E1D9BC;">Stations Map</h1>
+                <p class="hero-desc lead mx-auto" style="color: #F0F0DB; max-width: 700px;">
+                    Explore our the stations map to locate major city loops and junctions. Click on any local station to instantly view its exact coordinates and area guides.
+                </p>
+            </div>
+        </div>
+
+        <div class="carousel-item py-5">
+            <div class="text-center px-4">
+                <h1 class="hero-title fw-bold display-4" style="color: #E1D9BC;">Train Schedules</h1>
+                <p class="hero-desc lead mx-auto" style="color: #F0F0DB; max-width: 700px;">
+                    Stay informed with accurate daily arrival and departure times. Track platform updates for both local commuter lines and long-distance express routes.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+    <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-11">
+            <div class="search-wrapper p-4 rounded-4 shadow" style="background-color: #30364F; border: 1px solid rgba(255, 255, 255, 0.08);">
+                <div class="row g-3 align-items-end">
+                    
+                    <div class="col-md-3 search-field">
+                        <label for="fromStation" class="form-label fw-bold mb-2 text-cream">From Station</label>
+                <select id="fromStation" class="form-select bg-white text-dark border-0 rounded-3 p-2.5 shadow-sm">
+                    <option selected disabled>Select Station</option>
+                    <option>Yangon</option>
+                    <option>Toe Kyaung Ka Lay</option>
+                    <option>Bago</option>
+                    <option>Dike Oo</option>
+                    <option>Pyon Tan Sar</option>
+                    <option>Nyaung Lay Pin</option>
+                    <option>Kyaut Ta Khar</option>
+                    <option>Phyuu</option>
+                    <option>Tounggoo</option>
+                    <option>Yay Ni</option>
+                    <option>Pyin Ma Nar</option>
+                    <option>Nay Pyi Taw</option>
+                    <option>Tat khone</option>
+                    <option>Ya Mae Thin</option>
+                    <option>Pyaw Pwae</option>
+                    <option>Nyaung Yan</option>
+                    <option>Thar Si</option>
+                    <option>Thae Taw</option>
+                    <option>Myit Thar</option>
+                    <option>Kyaut Sal</option>
+                    <option>Mandalay</option>
+                </select>
+                    </div>
+
+                    <div class="col-md-3 search-field">
+                        <label for="toStation" class="form-label fw-bold mb-2 text-cream">To Station</label>
+                <select id="toStation" class="form-select bg-white text-dark border-0 rounded-3 p-2.5 shadow-sm">
+                    <option selected disabled>Select Station</option>
+                    <option>Yangon</option>
+                    <option>Toe Kyaung Ka Lay</option>
+                    <option>Bago</option>
+                    <option>Dike Oo</option>
+                    <option>Pyon Tan Sar</option>
+                    <option>Nyaung Lay Pin</option>
+                    <option>Kyaut Ta Khar</option>
+                    <option>Phyuu</option>
+                    <option>Tounggoo</option>
+                    <option>Yay Ni</option>
+                    <option>Pyin Ma Nar</option>
+                    <option>Nay Pyi Taw</option>
+                    <option>Tat khone</option>
+                    <option>Ya Mae Thin</option>
+                    <option>Pyaw Pwae</option>
+                    <option>Nyaung Yan</option>
+                    <option>Thar Si</option>
+                    <option>Thae Taw</option>
+                    <option>Myit Thar</option>
+                    <option>Kyaut Sal</option>
+                    <option>Mandalay</option>
+                </select>
+                    </div>
+
+                    <div class="col-md-3 search-field">
+                        <label class="form-label small fw-semibold" style="color: #F0F0DB;">Departure date</label>
+                        <input type="text" class="form-control border-0 py-2 bg-light text-dark"
+                               placeholder="Select Date"
+                               onfocus="(this.type='date')"
+                               onblur="if(!this.value)this.type='text'">
+                    </div>
+
+                    <div class="col-md-3">
+                        <button type="button" class="btn w-100 py-2 fw-bold" data-bs-toggle="collapse" data-bs-target="#trainResults"
+                                style="background-color: #E1D9BC; color: #24293E; border-radius: 6px;">
+                            <i class="bi bi-search me-2"></i>Search Trains
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <div id="trainResults" class="collapse">
+                    <div class="card border-0 rounded-4 shadow-sm overflow-hidden text-white" style="background-color: #30364F; border: 1px solid rgba(255, 255, 255, 0.05) !important;">
+                    
+                        <div class="card-header border-bottom py-3 px-4 h4 fw-bold mb-0" style="color: #E1D9BC; background-color: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.08) !important;">
+                            <i class="bi bi-train-front me-2"></i>Available Express Schedules
+                        </div>
+                    
+                        <div class="card-body p-4">
+                            <div class="row align-items-center g-3">
+                                <div class="col-md-8">
+                                    <h4 class="fw-bold mb-3" style="color: #F0F0DB;">Yangon Central ➝ Mandalay Central</h4>
+                                    <div class="row g-2 text-white-50" style="color: rgba(240, 240, 219, 0.8) !important; font-size: 15px;">
+                                        <div class="col-sm-6"><p class="mb-1"><strong style="color: #F0F0DB;">Departure:</strong> 07:00 AM</p></div>
+                                        <div class="col-sm-6"><p class="mb-1"><strong style="color: #F0F0DB;">Arrival:</strong> 10:31 AM</p></div>
+                                        <div class="col-sm-12"><p class="mb-0"><strong style="color: #F0F0DB;">Ticket Price:</strong> 16,000 Kyats</p></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <button type="button" class="btn px-4 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#myModal3" style="background-color: #E1D9BC; color: #24293E; border-radius: 6px;"> Book Now</button>
+                                </div>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <div id="trainResults" class="collapse">
+                    <div class="card border-0 rounded-4 shadow-sm overflow-hidden text-white" style="background-color: #30364F; border: 1px solid rgba(255, 255, 255, 0.05) !important;">
+                    
+                        <div class="card-header border-bottom py-3 px-4 h4 fw-bold mb-0" style="color: #E1D9BC; background-color: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.08) !important;">
+                            <i class="bi bi-train-front me-2"></i>Available Express Schedules
+                        </div>
+                    
+                        <div class="card-body p-4">
+                            <div class="row align-items-center g-3">
+                                <div class="col-md-8">
+                                    <h4 class="fw-bold mb-3" style="color: #F0F0DB;">Yangon Central ➝ Mandalay Central</h4>
+                                    <div class="row g-2 text-white-50" style="color: rgba(240, 240, 219, 0.8) !important; font-size: 15px;">
+                                        <div class="col-sm-6"><p class="mb-1"><strong style="color: #F0F0DB;">Departure:</strong> 04:00 AM</p></div>
+                                        <div class="col-sm-6"><p class="mb-1"><strong style="color: #F0F0DB;">Arrival:</strong> 07:31 AM</p></div>
+                                        <div class="col-sm-12"><p class="mb-0"><strong style="color: #F0F0DB;">Ticket Price:</strong> 16,000 Kyats</p></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <button type="button" class="btn px-4 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#myModal3" style="background-color: #E1D9BC; color: #24293E; border-radius: 6px;"> Book Now</button>
+                                </div>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <div id="trainResults" class="collapse">
+                    <div class="card border-0 rounded-4 shadow-sm overflow-hidden text-white" style="background-color: #30364F; border: 1px solid rgba(255, 255, 255, 0.05) !important;">
+                    
+                        <div class="card-header border-bottom py-3 px-4 h4 fw-bold mb-0" style="color: #E1D9BC; background-color: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.08) !important;">
+                            <i class="bi bi-train-front me-2"></i>Available Express Schedules
+                        </div>
+                    
+                        <div class="card-body p-4">
+                            <div class="row align-items-center g-3">
+                                <div class="col-md-8">
+                                    <h4 class="fw-bold mb-3" style="color: #F0F0DB;">Yangon Central ➝ Mandalay Central</h4>
+                                    <div class="row g-2 text-white-50" style="color: rgba(240, 240, 219, 0.8) !important; font-size: 15px;">
+                                        <div class="col-sm-6"><p class="mb-1"><strong style="color: #F0F0DB;">Departure:</strong> 05:00 PM</p></div>
+                                        <div class="col-sm-6"><p class="mb-1"><strong style="color: #F0F0DB;">Arrival:</strong> 08:31 PM</p></div>
+                                        <div class="col-sm-12"><p class="mb-0"><strong style="color: #F0F0DB;">Ticket Price:</strong> 16,000 Kyats</p></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <button type="button" class="btn px-4 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#myModal3" style="background-color: #E1D9BC; color: #24293E; border-radius: 6px;"> Book Now</button>
+                                </div>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal3">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+ 
+            <div class="modal-header">
+                <h4 class="modal-title">Choose Your Seat</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+ 
+            <div class="modal-body text-center">
+ 
+    <div class="container-four">
+ 
+        <div class="row mb-2">
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s1a" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s1a">1A</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s1b" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s1b">1B</label>
+            </div>
+ 
+            <div class="col-2"></div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s1c" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s1c">1C</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s1d" autocomplete="off" >
+                <label class="btn btn-outline-primary w-100 disabled" for="s1d">1D</label>
+            </div>
+        </div>
+ 
+        <div class="row mb-2">
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s2a" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s2a">2A</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s2b" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s2b">2B</label>
+            </div>
+ 
+            <div class="col-2"></div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s2c" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s2c">2C</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s2d" autocomplete="off">
+                <label class="btn btn-outline-primary w-100 disabled" for="s2d">2D</label>
+            </div>
+        </div>
+ 
+        <div class="row mb-2">
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s3a" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s3a">3A</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s3b" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s3b">3B</label>
+            </div>
+ 
+            <div class="col-2"></div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s3c" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s3c">3C</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s3d" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s3d">3D</label>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s4a" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s4a">4A</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s4b" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s4b">4B</label>
+            </div>
+ 
+            <div class="col-2"></div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s4c" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s4c">4C</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s4d" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s4d">4D</label>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s5a" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s5a">5A</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s5b" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s5b">5B</label>
+            </div>
+ 
+            <div class="col-2"></div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s5c" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s5c">5C</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s5d" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s5d">5D</label>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s6a" autocomplete="off">
+                <label class="btn btn-outline-primary w-100 disabled" for="s6a">6A</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s6b" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s6b">6B</label>
+            </div>
+ 
+            <div class="col-2"></div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s6c" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s6c">6C</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s6d" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s6d">6D</label>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s2a" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s2a">7A</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s2b" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s2b">7B</label>
+            </div>
+ 
+            <div class="col-2"></div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s2c" autocomplete="off">
+                <label class="btn btn-outline-primary w-100 disabled" for="s2c">7C</label>
+            </div>
+ 
+            <div class="col">
+                <input type="radio" class="btn-check" name="seat" id="s2d" autocomplete="off">
+                <label class="btn btn-outline-primary w-100" for="s2d">7D</label>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="modal-footer">
+                <a href="payment1.html" class="btn btn-success">Confirm Seat</a>
+ 
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+ 
+        </div>
+    </div>
+    </div>
+
+    <div class="container-five mt-3">
+    <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="ticketing1.html">Ticketing</a></li>
+        <li class="page-item"><a class="page-link" href="map1.html">Map</a></li> 
+        <li class="page-item"><a class="page-link" href="schedule1.html">Schedule</a></li>
+    </ul>
+    </div>
+    
+    <footer class="pt-5 pb-3 mt-5 border-top">
+        <div class="container">
+            <div class="row text-center text-md-start">
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">The Train Hub</h5>
+                    <p> Learn More About Our Website.</p>
+                </div>
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul style="list-style: none;">
+                        <li><a href="home1.html" class="text-light" >Home</a></li>
+                        <li><a href="about1.html" class="text-light">About</a></li>
+                        <li><a href="journeyplanner1.html" class="text-light">Journey Planner</a></li>
+                        <li><a href="sustainability1.html" class="text-light">Sustainability</a></li>
+                        <li><a href="contact1.html" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> support@thetrainhub.com</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Yangon, Myanmar</p>
+ 
+                    <div>
+                        <i class="bi bi-facebook me-3"></i>
+                        <i class="bi bi-instagram me-3"></i>
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center border-top pt-3 mt-3">
+            <p class="mb-0">&copy; 2026 THETRAINHUB. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

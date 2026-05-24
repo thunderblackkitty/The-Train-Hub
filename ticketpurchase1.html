@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Train Hub - Ticket Purchase</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    
+    <div class="container-one">
+        <nav class="navbar navbar-expand-lg glass">
+            <div class="container-fluid">
+                <a href="home1.html" class="navbar-brand">
+                    <img src="Images/logo.png" width="90px" height="90px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-3"><a href="home1.html" class="nav-link"> Home </a></li>
+                        <li class="nav-item px-3"><a href="about1.html" class="nav-link"> About </a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="journeyplanner1.html" role="button" data-bs-toggle="dropdown"> Journey Planner </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="ticketing.html"> Ticketing </a></li>
+                                <li><a class="dropdown-item" href="map1.html"> Map </a></li>
+                                <li><a class="dropdown-item" href="schedule1.html"> Schedule </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-3"><a href="sustainability1.html" class="nav-link"> Sustainability </a></li>
+                        <li class="nav-item px-3"><a href="contact1.html" class="nav-link"> Contact </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <i class="bi bi-person-circle"></i>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid p-0 mt-5">
+    <div class="row g-0 min-vh-100">
+ 
+      <aside class="col-md-6 col-lg-5 bg-custom-dark p-4 p-md-5 d-flex justify-content-md-end justify-content-start border-end border-secondary">
+        <div class="layout-constrained">
+          
+          <a href="payment1.html" class="text-decoration-none d-inline-block mb-4" style="color: #F0F0DB;">
+            <svg width="16" height="16" viewBox="0 0 24 24" class="svg-icon" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </a>
+          
+          <div class="fw-bolder fs-2 mb-4 tracking-wide text-gold">TicketExpress</div>
+         
+          <div class="mb-4">
+            <p id="checkout-class" class="text-cream-muted mb-2">Ordinary Class Ticket Reservation</p>
+            <h1 id="checkout-price" class="fw-bold display-6 mb-4 text-cream">16,000 Ks</h1>
+          </div>
+ 
+          <div class="d-flex flex-column gap-3">
+            
+            <label class="w-100 cursor-pointer">
+              <input type="radio" name="ticket_class" value="ordinary" class="d-none ticket-radio" checked onclick="document.getElementById('checkout-class').innerText='Ordinary Class Ticket Reservation'; document.getElementById('checkout-price').innerText='16,000 Ks';">
+              <div class="ticket-card p-3 rounded-4 border d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div>
+                    <h2 class="fw-bold mb-0 h5 text-light">Ordinary Class</h2>
+                    <div class="mt-2">
+                      <span class="badge rounded-pill px-2 py-1 small" style="background-color: #F0F0DB; color: #24293E;">Standard Seat</span>
+                    </div>
+                  </div>
+                  <h2 class="fw-bold h5 text-nowrap mb-0 text-gold">16,000 Ks</h2>
+                </div>
+                <p class="small text-cream-muted mb-0">Affordable seating for daily travel with standard comfort.</p>
+              </div>
+            </label>
+ 
+            <label class="w-100 cursor-pointer">
+              <input type="radio" name="ticket_class" value="upper" class="d-none ticket-radio" onclick="document.getElementById('checkout-class').innerText='Upper Class Ticket Reservation'; document.getElementById('checkout-price').innerText='28,000 Ks';">
+              <div class="ticket-card p-3 rounded-4 border d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div>
+                    <h2 class="fw-bold mb-0 h5 text-light">Upper Class</h2>
+                    <div class="mt-2">
+                      <span class="badge rounded-pill px-2 py-1 small" style="background-color: #E1D9BC; color: #24293E;">Premium Seat</span>
+                    </div>
+                  </div>
+                  <h2 class="fw-bold h5 text-nowrap mb-0 text-gold">28,000 Ks</h2>
+                </div>
+                <p class="small text-cream-muted mb-0">Extra comfort, larger seating, and quieter environment.</p>
+              </div>
+            </label>
+
+          </div>
+        </div>
+      </aside>
+ 
+      <main class="col-md-6 col-lg-7 bg-custom-main p-4 p-md-5 d-flex justify-content-start align-items-top">
+        <form class="layout-constrained">
+          <h2 class="h4 fw-bold mb-4 text-gold">Pay with card</h2>
+           
+          <div class="mb-4">
+            <label for="email" class="form-label small fw-medium text-cream mb-2">Email</label>
+            <input type="email" id="email" class="form-control form-custom p-3" placeholder="email@example.com" required>
+          </div>
+ 
+          <fieldset class="border-0 p-0 mb-4">
+            <legend class="fs-6 fw-medium text-cream mb-3">Payment method</legend>
+             
+            <div class="border border-secondary rounded-3 p-3 shadow-sm" style="background-color: #24293E;">
+              <div class="d-flex align-items-center gap-2 small fw-bold text-cream mb-3">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                </svg>
+                <span>Card</span>
+              </div>
+ 
+              <div class="border border-secondary rounded-2 overflow-hidden mb-3">
+                <div class="input-group border-bottom border-secondary">
+                  <input type="text" id="card-number" class="form-control border-0 p-3 bg-white" placeholder="1234 1234 1234 1234" required>
+                  <div class="input-group-text border-0 bg-white pe-3 d-flex gap-1">
+                    <span class="badge border border-secondary-subtle text-secondary bg-light font-monospace small px-1 py-0.5">Visa</span>
+                    <span class="badge border border-secondary-subtle text-secondary bg-light font-monospace small px-1 py-0.5">MC</span>
+                  </div>
+                </div>
+   
+                <div class="row g-0">
+                  <div class="col border-end border-secondary">
+                    <input type="text" id="card-expiry" class="form-control border-0 p-3 bg-white" placeholder="MM / YY" required>
+                  </div>
+                  <div class="col">
+                    <div class="input-group">
+                      <input type="text" id="card-cvc" class="form-control border-0 p-3 bg-white" placeholder="CVC" required>
+                      <span class="input-group-text border-0 bg-white text-muted pe-3">
+                        <svg width="20" height="20" viewBox="0 0 24 24" class="svg-icon">
+                          <rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+ 
+              <div class="mb-3">
+                <label for="card-name" class="form-label small fw-medium text-cream mb-2">Cardholder name</label>
+                <input type="text" id="card-name" class="form-control form-custom p-3" placeholder="Full name on card" required>
+              </div>
+            </div>
+          </fieldset>
+ 
+          <a href="ticketconfirmation1.html" class="btn btn-pay w-100 fw-bold mb-4 text-center d-block text-decoration-none">Pay Now</a>
+        </form>
+      </main>
+ 
+    </div>
+    </div>
+
+    <footer class="pt-5 pb-3 mt-5 border-top">
+        <div class="container">
+            <div class="row text-center text-md-start">
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">The Train Hub</h5>
+                    <p> Learn More About Our Website.</p>
+                </div>
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul style="list-style: none;">
+                        <li><a href="home1.html" class="text-light" >Home</a></li>
+                        <li><a href="about1.html" class="text-light">About</a></li>
+                        <li><a href="journeyplanner1.html" class="text-light">Journey Planner</a></li>
+                        <li><a href="sustainability1.html" class="text-light">Sustainability</a></li>
+                        <li><a href="contact1.html" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> support@thetrainhub.com</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Yangon, Myanmar</p>
+ 
+                    <div>
+                        <i class="bi bi-facebook me-3"></i>
+                        <i class="bi bi-instagram me-3"></i>
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center border-top pt-3 mt-3">
+            <p class="mb-0">&copy; 2026 THETRAINHUB. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
