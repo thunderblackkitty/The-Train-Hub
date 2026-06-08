@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Train Hub - Ticket Confirmation</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <div class="container-one">
+        <nav class="navbar navbar-expand-lg glass">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">
+                    <img src="logo.png" class="nav-logo" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-3"><a href="index.html" class="nav-link"> Home </a></li>
+                        <li class="nav-item px-3"><a href="about.html" class="nav-link"> About </a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="journeyplanner.html" role="button" data-bs-toggle="dropdown"> Journey Planner </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="ticketing.html"> Ticketing </a></li>
+                                <li><a class="dropdown-item" href="map.html"> Map </a></li>
+                                <li><a class="dropdown-item" href="schedule.html"> Schedule </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-3"><a href="sustainability.html" class="nav-link"> Sustainability </a></li>
+                        <li class="nav-item px-3"><a href="contact.html" class="nav-link"> Contact </a></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-one ms-3 rounded" data-bs-toggle="modal" data-bs-target="#myModal"> Sign Up </button>
+                <button type="button" class="btn btn-one ms-3 rounded" data-bs-toggle="modal" data-bs-target="#myModal1"> Log in </button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="ticket-container">
+        <div class="success-icon">✓</div>
+        <h2>Thank You for Your Purchase!</h2>
+        <p class="subtitle">Your train ticket is confirmed. Bon voyage!</p>
+ 
+        <div class="ticket-details">
+            <div class="detail-row">
+                <span class="label">Booking ID</span>
+                <span class="value">#TRN-982315</span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Route</span>
+                <span class="value">Grand Central → Union Station</span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Date & Time</span>
+                <span class="value">Oct 24, 2026 • 09:30 AM</span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Seat / Coach</span>
+                <span class="value">Seat 1A</span>
+            </div>
+        </div>
+ 
+        <div class="divider"></div>
+ 
+        <div class="qr-section">
+            <div class="qr-code">
+                <img src="QR.png" alt="Scan to Board">
+            </div>
+            <p class="qr-hint">Present this QR code to the conductor or station barrier upon boarding.</p>
+        </div>
+ 
+        <a href="home1.html" class="btn-done">Go to My Dashboard</a>
+    </div>
+
+    <footer class="pt-5 pb-3 mt-5 border-top">
+        <div class="container">
+            <div class="row text-center text-md-start">
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">The Train Hub</h5>
+                    <p> Learn More About Our Website.</p>
+                </div>
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul style="list-style: none;">
+                        <li><a href="home1.html" class="text-light" >Home</a></li>
+                        <li><a href="about1.html" class="text-light">About</a></li>
+                        <li><a href="journeyplanner1.html" class="text-light">Journey Planner</a></li>
+                        <li><a href="sustainability1.html" class="text-light">Sustainability</a></li>
+                        <li><a href="contact1.html" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> support@thetrainhub.com</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Yangon, Myanmar</p>
+ 
+                    <div>
+                        <i class="bi bi-facebook me-3"></i>
+                        <i class="bi bi-instagram me-3"></i>
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center border-top pt-3 mt-3">
+            <p class="mb-0">&copy; 2026 THETRAINHUB. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

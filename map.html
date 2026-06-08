@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Train Hub - Map</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    
+    <div class="container-one">
+        <nav class="navbar navbar-expand-lg glass">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">
+                    <img src="logo.png" class="nav-logo" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-3"><a href="index.html" class="nav-link"> Home </a></li>
+                        <li class="nav-item px-3"><a href="about.html" class="nav-link"> About </a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="journeyplanner.html" role="button" data-bs-toggle="dropdown"> Journey Planner </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="ticketing.html"> Ticketing </a></li>
+                                <li><a class="dropdown-item" href="map.html"> Map </a></li>
+                                <li><a class="dropdown-item" href="schedule.html"> Schedule </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-3"><a href="sustainability.html" class="nav-link"> Sustainability </a></li>
+                        <li class="nav-item px-3"><a href="contact.html" class="nav-link"> Contact </a></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-one ms-3 rounded" data-bs-toggle="modal" data-bs-target="#myModal"> Sign Up </button>
+                <button type="button" class="btn btn-one ms-3 rounded" data-bs-toggle="modal" data-bs-target="#myModal1"> Log in </button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content overflow-hidden border-0">
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-5 d-none d-md-block">
+                            <img src="log.jfif" alt="pic" class="h-100 w-100" style="object-fit: cover; min-height: 600px;">
+                        </div>
+
+                        <div class="col-md-7 p-4 p-lg-5">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h3 class="fw-bold">Create Account</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <form action="map1.html">
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your full name" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold">ID</label>
+                                    <input type="id" class="form-control" placeholder="Enter your id" required>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold">Email</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Enter your email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold">Phone Number</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Enter your phone number" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold">Birthdate</label>
+                                        <div class="input-group">
+                                            <input type="date" class="form-control" placeholder="Enter your birthdate" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold">Gender</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled value="">Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold">Password</label>
+                                        <input type="password" class="form-control" placeholder="Password" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold">Confirm Password</label>
+                                        <input type="password" class="form-control" placeholder="Confirm" required>
+                                    </div>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" id="agree1" required>
+                                    <label class="form-check-label small" for="agree1">I agree to the terms and agreements.</label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="agree2" required>
+                                    <label class="form-check-label small" for="agree2">I agree to the privacy policy.</label>
+                                </div>
+
+                                <div class="d-grid gap-2 pt-2">
+                                    <button type="submit" class="btn btn-theme-gold btn-lg">Sign Up</button>
+                                </div>
+
+                                <p class="text-center mt-4 mb-0 small">
+                                    Already have an account? 
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal1" data-bs-dismiss="modal">Log in</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content overflow-hidden border-0">
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-5 d-none d-md-block">
+                            <img src="logo.png" alt="pic" class="h-100 w-100" style="object-fit: cover; min-height: 600px;">
+                        </div>
+
+                        <div class="col-md-7 p-4 p-lg-5">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h3 class="fw-bold">Create Account</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <form action="map1.html">
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold">Email</label>
+                                    <input type="text" class="form-control" placeholder="Enter your email" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold">Password</label>
+                                    <input type="password" class="form-control" placeholder="Password" required>
+                                </div>
+
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" id="agree1" required>
+                                    <label class="form-check-label small" for="agree1">I agree to the terms and agreements.</label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="agree2" required>
+                                    <label class="form-check-label small" for="agree2">I agree to the privacy policy.</label>
+                                </div>
+
+                                <div class="d-grid gap-2 pt-2">
+                                    <button type="submit" class="btn btn-theme-gold btn-lg">Log in </button>
+                                </div>
+
+                                <p class="text-center mt-4 mb-0 small">
+                                    Don't have an account? 
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal" data-bs-dismiss="modal">Sign Up</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-wrapper mt-5">
+        <div class="stations-sidebar">
+            <h1 class="fw-bold mb-4" style="color: #F0F0DB; font-size: 28px;">Stations in Yangon</h1>
+        
+            <a href="https://www.mapbox.com/search?q=Yangon+Central+Railway+Station" target="mapbox" class="station-link">
+                <div class="container mt-3 p-0">
+                    <div class="card station-card shadow-sm rounded-4 overflow-hidden">
+                        <div class="card-header fw-bold py-3 border-bottom-0" style="color: #F0F0DB; background-color: #353b57;">
+                            Yangon
+                        </div>
+                        <div class="card-body d-flex align-items-center py-3 px-3">
+                            <div class="station-image-placeholder rounded-3 flex-shrink-0 d-flex flex-column align-items-center justify-content-center" style="width: 130px; height: 90px;">
+                                <img src="yan.jpg" alt="#" width="100px" height="100px">
+                            </div>
+                            <div class="ms-3 flex-grow-1">
+                                <p class="card-text small m-0" style="line-height: 1.5; color: rgba(240, 240, 219, 0.8);">
+                                    Yangon Central Railway Station is the largest rail gateway in Myanmar, serving as the southern terminus of the main line.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer border-top-0 pb-3 pt-1 d-flex justify-content-end" style="background-color: transparent;">
+                            <span class="btn rounded-pill btn-sm px-4 fw-semibold shadow-sm" style="font-size: 13px; background-color: #E1D9BC; color: #24293E;">Show on Map</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.mapbox.com/search?q=Toe+Kyaung+Ka+Lay+Railway+Station" target="mapbox" class="station-link">
+                <div class="container mt-3 p-0">
+                    <div class="card station-card shadow-sm rounded-4 overflow-hidden">
+                        <div class="card-header fw-bold py-3 border-bottom-0" style="color: #F0F0DB; background-color: #353b57;">
+                            Toe Kyaung Ka Lay
+                        </div>
+                        <div class="card-body d-flex align-items-center py-3 px-3">
+                            <div class="station-image-placeholder rounded-3 flex-shrink-0 d-flex flex-column align-items-center justify-content-center" style="width: 130px; height: 90px;">
+                                <img src="toe.jpg" alt="#" width="100px" height="100px">
+                            </div>
+                            <div class="ms-3 flex-grow-1">
+                                <p class="card-text small m-0" style="line-height: 1.5; color: rgba(240, 240, 219, 0.8);">
+                                    Located in eastern Yangon, this critical junction connects urban commuter routes to the national rail framework.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer border-top-0 pb-3 pt-1 d-flex justify-content-end" style="background-color: transparent;">
+                            <span class="btn rounded-pill btn-sm px-4 fw-semibold shadow-sm" style="font-size: 13px; background-color: #E1D9BC; color: #24293E;">Show on Map</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="map-panel">
+            <iframe name="mapbox" id="map-frame" src="https://maps.google.com/maps?q=Yangon,%20Myanmar&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+    </div>
+
+    <div class="container-five mt-5">
+    <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="ticketing.html">Ticketing</a></li>
+        <li class="page-item"><a class="page-link" href="map.html">Map</a></li> 
+        <li class="page-item"><a class="page-link" href="schedule.html">Schedule</a></li>
+    </ul>
+    </div>
+
+    <footer class="pt-5 pb-3 mt-5 border-top">
+        <div class="container">
+            <div class="row text-center text-md-start">
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">The Train Hub</h5>
+                    <p> Learn More About Our Website.</p>
+                </div>
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul style="list-style: none;">
+                        <li><a href="index.html" class="text-light" >Home</a></li>
+                        <li><a href="about.html" class="text-light">About</a></li>
+                        <li><a href="journeyplanner.html" class="text-light">Journey Planner</a></li>
+                        <li><a href="sustainability.html" class="text-light">Sustainability</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+ 
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> support@thetrainhub.com</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Yangon, Myanmar</p>
+ 
+                    <div>
+                        <i class="bi bi-facebook me-3"></i>
+                        <i class="bi bi-instagram me-3"></i>
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center border-top pt-3 mt-3">
+            <p class="mb-0">&copy; 2026 THETRAINHUB. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
